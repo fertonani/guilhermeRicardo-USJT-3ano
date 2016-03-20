@@ -17,6 +17,8 @@ public class Extrato extends Observable {
 	private ArrayList<Extrato> listaExtrato;
 	private Conta conta;
 	private MovimentoDAO movimento;
+	private ExtratoTO to;
+	private double saldo;
 
 	public Extrato(Conta conta, Date de, Date ate) throws SQLException {
 		this.conta = conta;
@@ -92,6 +94,29 @@ public class Extrato extends Observable {
 				totalDebito += listaExtrato.get(i).getValor();
 			}
 		}
+		setSaldo(totalCredito - totalDebito);
 		return totalCredito - totalDebito;
+	}
+
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
+	}
+
+	public ExtratoTO criar() {
+		to = new ExtratoTO(idHistorico, data, tipo, numDoc, valor);
+		return to;
+	}
+
+	public ExtratoTO atualizar() {
+		to.setIdHistorico(idHistorico);
+		to.setData(data);
+		to.setConta(conta);
+		to.setListaExtrato(listaExtrato);
+		to.setMovimento(movimento);
+		to.setNumDoc(numDoc);
+		to.setTipo(tipo);
+		to.setValor(valor);
+		to.setSaldo(saldo);
+		return to;
 	}
 }

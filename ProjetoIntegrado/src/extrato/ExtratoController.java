@@ -17,13 +17,14 @@ public class ExtratoController extends ExtratoForm {
 	private ResourceBundle bn;
 	private Conta conta;
 	private Extrato extrato;
-
+	private ExtratoTO to;
 	public ExtratoController(ResourceBundle bn, Conta conta) {
 		super(bn, conta);
 		this.bn = bn;
 		this.conta = conta;
 		setNome(conta.getNome());
 		extrato = null;
+		to = null;
 		add7DiasListener(new Dias7Listener());
 		add15DiasListener(new Dias15Listener());
 		addOutroListener(new DiaOutroListener());
@@ -36,6 +37,7 @@ public class ExtratoController extends ExtratoForm {
 			aux.add(Calendar.DATE, -7);
 			try {
 				extrato = new Extrato(conta, aux.getTime(), agora.getTime());
+				to = extrato.criar();
 			} catch (SQLException e1) {
 				e1.printStackTrace();
 			}
@@ -62,6 +64,7 @@ public class ExtratoController extends ExtratoForm {
 			aux.add(Calendar.DATE, -15);
 			try {
 				extrato = new Extrato(conta, aux.getTime(), agora.getTime());
+				to = extrato.criar();
 			} catch (SQLException e1) {
 				e1.printStackTrace();
 			}
@@ -88,6 +91,7 @@ public class ExtratoController extends ExtratoForm {
 			if (de.before(ate)) {
 				try {
 					extrato = new Extrato(conta, de.getTime(), ate.getTime());
+					to = extrato.criar();
 				} catch (SQLException e1) {
 					e1.printStackTrace();
 				}

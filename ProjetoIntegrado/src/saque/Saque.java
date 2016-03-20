@@ -13,6 +13,7 @@ public class Saque extends Observable {
 	private Dispenser dispenser;
 	private double valor;
 	private MovimentoDAO movimento;
+	private SaqueTO to;
 	public Saque(Conta conta, Double valor) throws SQLException{
 		this.conta = conta;
 		this.valor = valor;
@@ -33,5 +34,10 @@ public class Saque extends Observable {
 	}
 	public boolean verificarNotas() throws FileNotFoundException{
 		return dispenser.verificarNotas(valor);
+	}
+	
+	public void criarTO(){
+		to = new SaqueTO();
+		to.setValor(valor);
 	}
 }
