@@ -7,9 +7,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Date;
 
-import extrato.Extrato;
-import extrato.ExtratoTO;
 import model.Conta;
+import model.Extrato;
+import to.ExtratoTO;
 
 public class MovimentoDAO {
 	private AcessoBD acesso;

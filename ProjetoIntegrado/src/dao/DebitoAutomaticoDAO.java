@@ -3,9 +3,9 @@
 	import java.sql.Connection;
 	import java.sql.PreparedStatement;
 	import java.sql.SQLException;
-	
-	import debitoAutomatico.DebitoAutomatico;
-	import model.Conta;
+
+import model.Conta;
+import model.DebitoAutomatico;
 	
 	public class DebitoAutomaticoDAO {
 		private AcessoBD acesso;

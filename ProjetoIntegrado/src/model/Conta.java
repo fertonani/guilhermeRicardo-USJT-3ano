@@ -4,9 +4,6 @@ import java.sql.SQLException;
 
 import dao.ContaDAO;
 
-import login.Login;
-import transferencia.Transferencia;
-
 public class Conta {
 	private int agencia, conta, senha, cod, idCliente, Banco;
 	private String nome;

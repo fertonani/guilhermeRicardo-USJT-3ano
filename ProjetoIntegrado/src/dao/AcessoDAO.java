@@ -3,9 +3,8 @@ package dao;
 import java.io.*;
 import java.util.*;
 
-import login.Login;
-
 import criptografia.Crypto;
+import model.Login;
 
 public class AcessoDAO {
 	private Formatter output, outputDecifrado;
