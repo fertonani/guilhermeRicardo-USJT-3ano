@@ -25,12 +25,16 @@ public class Saque extends Observable {
 	}
 	public boolean sacar() throws FileNotFoundException{
 		if(dispenser.sacar(valor)){
-			conta.setSaldo(conta.getSaldo() - valor);
-			movimento.incluir('D', valor);
+			funcaoSacar();
 			return true;
 		}
 		return false;
 	}
+	public void funcaoSacar(){
+		conta.setSaldo(conta.getSaldo() - valor);
+		movimento.incluir('D', valor);
+	}
+	
 	public boolean verificarNotas() throws FileNotFoundException{
 		return dispenser.verificarNotas(valor);
 	}

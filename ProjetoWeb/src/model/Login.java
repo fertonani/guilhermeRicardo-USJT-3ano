@@ -13,11 +13,11 @@ public class Login extends Observable{
 	private ContaDAO contaDAO;
 	private Conta contaM;
 	public Login(){
-		agencia = "12345";
-		conta = "345678";
-		senha = "123456";
-		cod = "111";
-		acesso = new AcessoDAO(this);
+		agencia = "1";
+		conta = "1";
+		senha = "1";
+		cod = "147";
+		acesso = new AcessoDAO(this, true);
 	}
 	public Login(String agencia, String conta, String senha, String cod) throws SQLException {
 		this.agencia = agencia;
@@ -25,6 +25,13 @@ public class Login extends Observable{
 		this.senha = senha;
 		this.cod = cod;
 		acesso = new AcessoDAO(this);
+	}
+	public Login(String agencia, String conta, String senha, String cod, boolean modoTeste) throws SQLException {
+		this.agencia = agencia;
+		this.conta = conta;
+		this.senha = senha;
+		this.cod = cod;
+		acesso = new AcessoDAO(this, true);
 	}
 	
 	public String getAgencia() {

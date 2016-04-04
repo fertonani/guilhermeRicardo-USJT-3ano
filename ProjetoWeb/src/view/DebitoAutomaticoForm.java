@@ -10,7 +10,6 @@ import java.util.ResourceBundle;
 
 import javax.swing.*;
 
-import calendar.JCalendar;
 import controller.PainelController;
 import model.Conta;
 
@@ -27,7 +26,7 @@ public class DebitoAutomaticoForm extends JFrame implements Observer {
 		setLayout(new BorderLayout(3, 2));
 		bn = bnn;
 		this.conta = conta;
-		ccb = new JCalendar(true);
+		//ccb = new JCalendar(true);
 		nomeCliente = new JPanel();
 		nomeCliente.setLayout(new FlowLayout(FlowLayout.CENTER));
 		lNomeCliente = new JLabel("<<NOME DO CLIENTE>>");

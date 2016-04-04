@@ -33,6 +33,13 @@ public class AcessoDAO {
 		sSenha = "";
 		sCod = "";
 	}
+	public AcessoDAO(Login login, boolean modoTeste){
+		this.login = login;
+		sAgencia = "";
+		sConta = "";
+		sSenha = "";
+		sCod = "";
+	}
 
 	public void openFile() {
 		try {

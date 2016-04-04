@@ -3,7 +3,6 @@ package view;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
-import calendar.JCalendar;
 import controller.PainelController;
 import model.Conta;
 
@@ -38,8 +37,8 @@ public class ExtratoForm extends JFrame implements Observer {
 		colunas[2] = bn.getString("extratoForm.nDoc");
 		colunas[3] = bn.getString("extratoForm.valor");
 		colunas[4] = bn.getString("extratoForm.saldo");
-		calendarioDe = new JCalendar(true);
-		calendarioAte = new JCalendar(true);
+		//calendarioDe = new JCalendar(true);
+		//calendarioAte = new JCalendar(true);
 		lNomeCliente = new JLabel("<<NOME DO CLIENTE>>");
 		bImprimir = new JButton(bn.getString("geral.bImprimir"));
 		topo = new JPanel();
