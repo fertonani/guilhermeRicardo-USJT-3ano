@@ -39,6 +39,8 @@ public class AcessoDAO {
 		sConta = "";
 		sSenha = "";
 		sCod = "";
+		posicao = 0;
+		cod[posicao] = 111;
 	}
 
 	public void openFile() {

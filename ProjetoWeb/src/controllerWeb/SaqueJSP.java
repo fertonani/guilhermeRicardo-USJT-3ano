@@ -49,7 +49,7 @@ public class SaqueJSP extends HttpServlet {
 			e2.printStackTrace();
 		}
 		try {
-			conta = new Conta(login);
+			conta = new Conta(login, true);
 			System.out.println("conta");
 		} catch (SQLException e2) {
 
@@ -68,7 +68,7 @@ public class SaqueJSP extends HttpServlet {
 		saque.funcaoSacar();
 		request.setAttribute("saque", saque);
 
-		RequestDispatcher view = request.getRequestDispatcher("Saque.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("SaqueJSP.jsp");
 		view.forward(request, response);
 	}
 

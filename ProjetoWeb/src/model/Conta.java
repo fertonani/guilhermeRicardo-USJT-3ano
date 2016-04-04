@@ -17,6 +17,14 @@ public class Conta {
 		setSenha(Integer.parseInt(login.getSenha()));
 		setCod(Integer.parseInt(login.getCod()));
 	}
+	public Conta(Login login, boolean modoTeste) throws SQLException {
+		dao = new ContaDAO(this);
+		this.login = login;
+		setAgencia(Integer.parseInt(login.getAgencia()));
+		setConta(Integer.parseInt(login.getConta()));
+		setSenha(111);
+		setCod(111);
+	}
 	public Conta(Transferencia transf) throws SQLException {
 		dao = new ContaDAO(this);
 		setAgencia(Integer.parseInt(transf.getAgencia()));

@@ -39,6 +39,9 @@ public class Saque extends Observable {
 		return dispenser.verificarNotas(valor);
 	}
 	
+	public double getValor(){
+		return valor;
+	}
 	public void criarTO(){
 		to = new SaqueTO();
 		to.setValor(valor);

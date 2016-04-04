@@ -15,7 +15,7 @@ import model.Conta;
 import model.Login;
 import model.Saque;
 
-@WebServlet("/saque.do")
+@WebServlet("/Saque.do")
 public class SaqueControlWeb extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private Saque saque;
@@ -38,7 +38,7 @@ public class SaqueControlWeb extends HttpServlet {
 			e2.printStackTrace();
 		}
 		try {
-			conta = new Conta(login);
+			conta = new Conta(login, true);
 			System.out.println("conta");
 		} catch (SQLException e2) {
 

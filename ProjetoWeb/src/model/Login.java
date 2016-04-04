@@ -31,7 +31,7 @@ public class Login extends Observable{
 		this.conta = conta;
 		this.senha = senha;
 		this.cod = cod;
-		acesso = new AcessoDAO(this, true);
+		//acesso = new AcessoDAO(this, true);
 	}
 	
 	public String getAgencia() {

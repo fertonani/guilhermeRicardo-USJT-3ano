@@ -43,10 +43,10 @@ public class ExtratoJSP extends HttpServlet {
 			e2.printStackTrace();
 		}
 		try {
-			conta = new Conta(login);
+			conta = new Conta(login, true);
 			System.out.println("conta");
 		} catch (SQLException e2) {
-			e2.printStackTrace();
+			
 		}
 		Calendar agora = Calendar.getInstance();
 		Calendar aux = Calendar.getInstance();
@@ -57,7 +57,7 @@ public class ExtratoJSP extends HttpServlet {
 			e.printStackTrace();
 		}
 		request.setAttribute("extrato", extrato);
-		RequestDispatcher view = request.getRequestDispatcher("Saque.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("ExtratoJSP.jsp");
 		view.forward(request, response);
 	}
 }

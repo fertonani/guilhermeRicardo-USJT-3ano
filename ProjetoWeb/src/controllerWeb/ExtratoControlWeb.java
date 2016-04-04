@@ -18,7 +18,7 @@ import model.Login;
 /**
  * Servlet implementation class ExtratoControlWeb
  */
-@WebServlet("extrato.do")
+@WebServlet("/Extrato.do")
 public class ExtratoControlWeb extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private Extrato extrato;
@@ -47,7 +47,7 @@ public class ExtratoControlWeb extends HttpServlet {
 			e2.printStackTrace();
 		}
 		try {
-			conta = new Conta(login);
+			conta = new Conta(login, true);
 			System.out.println("conta");
 		} catch (SQLException e2) {
 			e2.printStackTrace();
