@@ -14,6 +14,6 @@ public class AcessoBD {
 	}
 
 	public Connection obtemConexao() throws SQLException {
-		return DriverManager.getConnection("jdbc:mysql://localhost/mydb?user=alunos&password=alunos");
+		return DriverManager.getConnection("jdbc:mysql://localhost/mydb?user=root&password=root");
 	}
 }
