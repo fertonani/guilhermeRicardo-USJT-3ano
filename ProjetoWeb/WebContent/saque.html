@@ -1,16 +1,83 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Saque</title>
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-	<h1>Saque</h1>
+ <!-- Barra superior com os menus de navegação -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Caixa Eletronico</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="debitoAutomatico.html">Debito Automatico</a>
+                    </li>
+                    <li><a href="extrato.html">Extrato</a>
+                    </li>
+                    <li><a href="saldo.html">Saldo</a>
+                    </li>
+                    <li><a href="saque.html">Saque</a>
+                    </li>
+                    <li><a href="transferencia.html">Transferencia</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+	<!-- Container Principal -->
+	<h3>Saque</h3>
+
+	<div class="row">
+		<div class="form-group col-md-6">
+			<label for="agencia">Agência</label> <input type="tel"
+				class="form-control" name="agencia" id="agencia" required
+				maxlength="15">
+		</div>
+	</div>
+	<div class="row">
+		<div class="form-group col-md-6">
+			<label for="conta">Conta</label> <input type="email"
+				class="form-control" name="conta" id="conta" required maxlength="60">
+		</div>
+	</div>
+	<div class="row">
+		<div class="form-group col-md-6">
+			<label for="valor">Valor</label> <input type="valor"
+				class="form-control" name="valor" id="valor" required maxlength="60">
+		</div>
+	</div>
+	
+	<div id="actions" class="row">
+		<div class="col-md-12">
+			<button type="submit" class="btn btn-primary" name="acao"
+				value="sacar">Sacar</button>
+		</div>
+	</div>
+	
+	<!-- 
 	<form action="Saque.do" action="post">
 		Agência: <input type="text" name="agencia"><br> Conta: <input
 			type="text" name="conta"><br> Valor: <input
 			type="number" name="valor"><br> <input type="submit"
 			name="sacar" value="Sacar"></input>
 	</form>
+	-->
+	
+	<script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>	
 </body>
 </html>
