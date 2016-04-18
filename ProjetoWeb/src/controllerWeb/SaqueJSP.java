@@ -68,7 +68,7 @@ public class SaqueJSP extends HttpServlet {
 		saque.funcaoSacar();
 		request.setAttribute("saque", saque);
 
-		RequestDispatcher view = request.getRequestDispatcher("SaqueJSP.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("VerSaque.jsp");
 		view.forward(request, response);
 	}
 

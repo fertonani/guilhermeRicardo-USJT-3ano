@@ -57,7 +57,7 @@ public class ExtratoJSP extends HttpServlet {
 			e.printStackTrace();
 		}
 		request.setAttribute("extrato", extrato);
-		RequestDispatcher view = request.getRequestDispatcher("ExtratoJSP.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("VerExtrato.jsp");
 		view.forward(request, response);
 	}
 }
